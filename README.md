@@ -12,6 +12,6 @@ Je me demande est-ce qu'on apprend ou on désapprend ?
 
 Il fut un temps PHP ne pouvant pas importer une portion de code dans un code parent sans éclaser les variables globales de ce dernier. Les gens se plaignaient de cela. Et pour remédier à ça PHP a apporter une solution magique `namesapce`. Pour moi cette une grande opportunité pour améliorer la façon dont les middlewares fonctionnnent dans les Frameworks. Il fallait avoir cette possibilité d'imbliquer des middleware jusqu'à l'infini (pour ne pas exagérer :smile:).
 
-```
-   sfs
+```flow
+   st=>start: Start
 ```
