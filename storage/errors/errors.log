@@ -1,0 +1,22 @@
+[15-Dec-2022 16:29:01 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Clicalmani\XPower" in E:\Toncat\app\http\controllers\TestController.php:24
+Stack trace:
+#0 E:\Toncat\vendor\clicalmani\flesco\src\Http\Controllers\RequestController.php(156): App\Http\Controllers\TestController->hash(Object(Clicalmani\Flesco\Http\Requests\Request))
+#1 E:\Toncat\vendor\clicalmani\flesco\src\Http\Controllers\RequestController.php(52): Clicalmani\Flesco\Http\Controllers\RequestController::getRoutine(Object(Clicalmani\Flesco\Http\Requests\Request))
+#2 E:\Toncat\public\index.php(6): Clicalmani\Flesco\Http\Controllers\RequestController::render()
+#3 E:\Toncat\server.php(10): require_once('E:\\Toncat\\publi...')
+#4 {main}
+  thrown in E:\Toncat\app\http\controllers\TestController.php on line 24
+[15-Dec-2022 16:31:49 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Clicalmani\XPower\XDT" not found in E:\Toncat\app\http\controllers\TestController.php:20
+Stack trace:
+#0 E:\Toncat\vendor\clicalmani\flesco\src\Http\Controllers\RequestController.php(156): App\Http\Controllers\TestController->hash(Object(Clicalmani\Flesco\Http\Requests\Request))
+#1 E:\Toncat\vendor\clicalmani\flesco\src\Http\Controllers\RequestController.php(52): Clicalmani\Flesco\Http\Controllers\RequestController::getRoutine(Object(Clicalmani\Flesco\Http\Requests\Request))
+#2 E:\Toncat\public\index.php(6): Clicalmani\Flesco\Http\Controllers\RequestController::render()
+#3 E:\Toncat\server.php(10): require_once('E:\\Toncat\\publi...')
+#4 {main}
+  thrown in E:\Toncat\app\http\controllers\TestController.php on line 20
+[15-Dec-2022 16:32:06 UTC] PHP Warning:  dir(E:\Toncat\pdms_content\assets\xml): Le chemin d’accès spécifié est introuvab (code: 3) in E:\Toncat\vendor\clicalmani\xpower\XDT.php on line 96
+[15-Dec-2022 16:32:06 UTC] PHP Warning:  dir(E:\Toncat\pdms_content\assets\xml): Failed to open directory: No such file or directory in E:\Toncat\vendor\clicalmani\xpower\XDT.php on line 96
+[15-Dec-2022 16:38:24 UTC] PHP Warning:  dir(E:\Toncat\pdms_content\assets\xml): Le chemin d’accès spécifié est introuvab (code: 3) in E:\Toncat\vendor\clicalmani\xpower\XDT.php on line 96
+[15-Dec-2022 16:38:24 UTC] PHP Warning:  dir(E:\Toncat\pdms_content\assets\xml): Failed to open directory: No such file or directory in E:\Toncat\vendor\clicalmani\xpower\XDT.php on line 96
+[15-Dec-2022 16:39:04 UTC] PHP Warning:  dir(E:\Toncat\pdms_content\assets\xml): Le chemin d’accès spécifié est introuvab (code: 3) in E:\Toncat\vendor\clicalmani\xpower\XDT.php on line 96
+[15-Dec-2022 16:39:04 UTC] PHP Warning:  dir(E:\Toncat\pdms_content\assets\xml): Failed to open directory: No such file or directory in E:\Toncat\vendor\clicalmani\xpower\XDT.php on line 96

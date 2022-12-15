@@ -1,5 +1,6 @@
 {
     "require": {
-        "clicalmani/flesco": "^1.0"
+        "clicalmani/flesco": ">=1.0",
+        "clicalmani/xpower": ">=2.3.0"
     }
 }
