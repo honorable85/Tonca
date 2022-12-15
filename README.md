@@ -16,8 +16,7 @@ Il fut un temps PHP ne pouvant pas importer une portion de code dans un code par
    Middleware 2 --> Middleware 1
 ```
 
-```mermaid
-graph TD;
+```flow;
     A-->B;
     A-->C;
     B-->D;
