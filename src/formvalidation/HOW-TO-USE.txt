@@ -1,1 +1,0 @@
-Please take a look at the official website (https://formvalidation.io/guide/getting-started) to see how to use the FormValidation library.
