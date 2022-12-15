@@ -21,3 +21,11 @@ Il fut un temps PHP ne pouvant pas importer une portion de code dans un code par
    st->op->cond
    cond(yes)->e
 ```
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
