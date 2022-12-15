@@ -1,0 +1,48 @@
+// 
+// OWL Carousel
+// 
+
+.owl-theme {
+
+    .owl-nav.disabled + .owl-dots {
+        margin-top: 30px;
+    }
+
+    .owl-dots {
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -50px;
+        background: none;
+
+        .owl-dot {
+            display: inline-block;
+            zoom: 1;
+            background: transparent;
+            padding: 1px 6px !important;
+
+            span {
+                width: 10px;
+                height: 10px;
+                margin: 5px 2px;
+                background: #d8d8d8;
+                display: block;
+                transition: opacity .2s ease;
+                border-radius: 30px;
+                position: relative;
+            }
+
+            &:hover, &.active {
+                span {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+
+    .owl-nav {
+        display:  none !important;
+    }
+}

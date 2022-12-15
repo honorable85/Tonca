@@ -1,0 +1,19 @@
+.pf-progress {
+	width: 10em;
+    background: #FFF;
+    color: #0033FF;
+	padding: 1px;
+	border: #A0A8AF solid 1px;
+
+    &::-webkit-progress-bar {
+        background: #FFF;
+    }
+
+    &::-moz-progress-bar {
+        background: #0033FF;
+    }
+
+    &::-webkit-progress-value {
+        background: #0033FF;
+    }
+}

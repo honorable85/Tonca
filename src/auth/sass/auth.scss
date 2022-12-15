@@ -1,0 +1,59 @@
+@CHARSET "ISO-8859-1";
+
+body { overflow: hidden; }
+.wrap, .overlay { position: absolute; height: 100%; }
+.wrp { height: 100%; overflow: hidden; }
+.overlay > img { height: 100%; border: none; }
+header, section, footer { position: absolute; left: 0px; }
+header { top: 0px; height: 54px; line-height: 54px; background-color: rgba(0,0,0,.42); padding-left: 1.2em; }
+header > a { color: rgba(255,255,255,.56); text-decoration: none!important; }
+header > a:hover { color: #FFF; }
+section { top: 54px; height: 100%; }
+footer { bottom: 0px; height: 34px; line-height: 34px; font-family: 'robotothin'; font-size: 12px; text-align: center; background-color: rgba(0,0,0,.42); color: rgba(255,255,255,.6); }
+section > form { width: 41%; height: auto; background-color: #d8d4d4; margin: 0 auto; margin-top: 120px; padding: 2%; padding-top: 6%; box-sizing: border-box; position: relative; border-radius: 4px; }
+section > form#startup:before, section > form:after, section > form#licence:before, section > form#licence:after, section > form#session:before, section > form#session:after { position: absolute; left: 0px; }
+section > form#startup:before, section > form#licence:before, section > form#session:before { z-index: 10; width: 25%; left: 35%; top: 24px; background: #d8d4d4; height: auto; content: "LANCEMENT"; text-align: center; color: rgba(0,0,0,.5); font-family: 'robotomedium'; font-size: 21px; }
+section > form#startup:after, section > form#licence:after, section > form#session:after { content: " "; background: #FFF; width: 92%; height: 1px; top: 37px; left: 4%; z-index: 1; }
+section > form#licence:before { content: 'LICENCE'; }
+section > form#session:before { content: 'SESSION'; }
+section > form > table { width: 100%; height: auto; border-collapse: collapse; }
+section > form .textbox { box-shadow: inset 1px 1px 5px 1px rgba(0, 0, 0, 0.1); display: block; width: 100%; height: 45px; box-sizing: border-box; border: rgba(0,0,0,.38) solid 1px; border-radius: 8px; outline: none; padding-left: 41px; margin-bottom: 18px; }
+section > form .textbox:hover { border: #00BCD4 solid 1px; }
+section > form .field-wrp { display: block; overflow: hidden; position: relative; }
+section > form .error { border: #f00 solid 1px!important; position: relative; }
+section > form .error-icon { position: absolute; top: 7px; right: 15px; width: 24px; height: 24px; background: transparent url(../img/sprite.png) no-repeat 0px -287px; }
+section > form .textbox.school { background: #FFF url(../img/sprite.png) no-repeat 8px -375px; }
+section > form .textbox.code { background: #FFF url(../img/sprite.png) no-repeat 8px -520px; }
+section > form .textbox.hint { background: #FFF url(../img/sprite.png) no-repeat 8px -327px; }
+section > form .textbox.licence { background: #FFF url(../img/sprite.png) no-repeat 8px -161px; }
+section > form input[type=submit] { margin-bottom: 1.2em; display: block; background-color: #00BCD4; width: 100%; height: 42px; line-height: 42px; text-align: center; color: #FFF; font-family: 'sans-serif'; font-size: 12px; box-shadow: 0px 1px 1px 1px rgba(0,0,0,.2); border: none; border-radius: 4px; text-transform: uppercase; transition: all .2s ease-in-out; }
+section > form input[type=submit]:hover { transform: scale(1.01); }
+section > form input[type=submit]:active { box-shadow: inset 0px 1px 1px 1px rgba(0,0,0,.2); }
+.check-on { background: transparent url(../img/sprite.png) no-repeat 8px -327px; }
+.prettyform-checkbox-wrp + label { display: inline-block; height: 30px; line-height: 27px; width: auto; vertical-align: top; }
+.pf-checkbox-wrp { vertical-align: middle; }
+
+@media (min-width: 360px) {
+	section > form { width: 90%; padding-top: 16%; }
+	section { top: 20px; }
+}
+
+@media (min-width: 576px) {
+	section > form { width: 60%; padding-top: 10%; }
+	section { top: 54px; }
+}
+
+@media (min-width: 768px) {
+	section > form { width: 45%; padding-top: 6%; }
+	section { top: 54px; }
+}
+
+@media (min-width: 992px) {
+	section > form { width: 41%; padding-top: 6%; }
+	section { top: 54px; }
+}
+
+@media (min-width: 1200px) {
+	section > form { width: 41%; padding-top: 6%; }
+	section { top: 54px; }
+}

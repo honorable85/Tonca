@@ -1,0 +1,143 @@
+//
+// Pagination
+//
+
+// Pagination circle
+.pagination-circle {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0;
+
+	.page-numbers {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		height: $pagination-item-height;
+		min-width: $pagination-item-height;
+		font-weight: $pagination-font-weight;
+		font-size: $pagination-font-size;
+
+		i {
+			font-size: $pagination-icon-font-size;
+		}
+
+		&.prev,
+		&.next {
+			height: $pagination-icon-height;
+			width: $pagination-icon-height;
+		}
+
+		&.prev {
+			@include svg-bg-icon(arrow-start, $pagination-color);
+		}
+
+		&.next {
+			@include svg-bg-icon(arrow-end, $pagination-color);
+		}
+
+		&.next:not(:hover):not(:focus):not(.disabled),
+		&.prev:not(:hover):not(:focus):not(.disabled) {
+			background-color: $pagination-item-bg;
+	
+			i {
+				color: $pagination-color;
+			}
+	
+			.svg-icon {
+				@include svg-icon-color($pagination-color);
+			}
+		}
+	
+		&:focus:not(.disabled) {
+			i {
+				color: $pagination-focus-color;
+			}
+	
+			.svg-icon {
+				@include svg-icon-color($pagination-focus-color);
+			}			
+
+			&.prev {
+				@include svg-bg-icon(arrow-start, $pagination-focus-color);
+			}
+
+			&.next {
+				@include svg-bg-icon(arrow-end, $pagination-focus-color);
+			}
+		}
+
+		&:hover, 
+		&.current {
+			background-color: $primary;
+			color: $light;
+		}
+	
+		&:hover:not(.disabled) {
+			i {
+				color: $pagination-hover-color;
+			}
+	
+			.svg-icon {
+				@include svg-icon-color($pagination-hover-color);
+			}
+			
+			&.prev {
+				@include svg-bg-icon(arrow-start, $pagination-hover-color);
+			}
+
+			&.next {
+				@include svg-bg-icon(arrow-end, $pagination-hover-color);
+			}
+		}
+	
+		&.current {
+			i {
+				color: $pagination-active-color;
+			}
+	
+			.svg-icon {
+				@include svg-icon-color($pagination-active-color);
+			}
+
+			&.prev {
+				@include svg-bg-icon(arrow-start, $pagination-active-color);
+			}
+
+			&.next {
+				@include svg-bg-icon(arrow-end, $pagination-active-color);
+			}
+		}
+	
+		&.disabled {
+			i {
+				color: $pagination-disabled-color;
+			}
+	
+			.svg-icon {
+				@include svg-icon-color($pagination-disabled-color);
+			}
+			
+			&.prev {
+				@include svg-bg-icon(arrow-start, $pagination-disabled-color);
+			}
+
+			&.next {
+				@include svg-bg-icon(arrow-end, $pagination-disabled-color);
+			}
+		}
+	}
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	.page-item {
+		margin-right: $pagination-item-space-tablet-and-mobile;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+

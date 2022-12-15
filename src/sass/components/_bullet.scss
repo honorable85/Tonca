@@ -1,0 +1,65 @@
+//
+// Bullet
+//
+
+// Base
+.bullet {
+    display: inline-block;
+    background-color: get($bullet, bg-color);
+    @include border-radius(get($bullet, bar-border-radius));
+    width: get($bullet, bar-width);
+    height: get($bullet, bar-height);
+    flex-shrink: 0;
+}
+
+// Dot bullet
+.bullet-dot {
+    width: get($bullet, dot-size);
+    height: get($bullet, dot-size);
+    border-radius: 100% !important;
+}
+
+// Vertical bullet
+.bullet-vertical {
+    width: get($bullet, bar-height);
+    height: get($bullet, bar-width);
+}
+
+// Vertical line
+.bullet-line {
+    width: get($bullet, line-width);
+    height: get($bullet, line-height);
+    border-radius: none;
+}
+
+// Check bullet
+.bullet-check {
+    display: inline-block;
+    position: relative;
+	top: 0;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	box-shadow: inset 1px 1px 5px 1px rgba($black, .1);
+	border: 1px solid $light;
+	border-radius: 4px;
+    margin-right: get($menu, link, check, ml);
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: get($menu, link, check, left);
+        top: get($menu, link, check, top);
+        width: get($menu, link, check, width);
+        height: get($menu, link, check, height);
+        border: solid $primary;
+        border-width: get($menu, link, check, border);;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+}

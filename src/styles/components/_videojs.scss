@@ -1,0 +1,16 @@
+.vjs-big-play-button {
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border: none !important;
+    background-color: $primary !important;
+
+    & .vjs-icon-placeholder {
+        color: $white !important;
+    }
+}

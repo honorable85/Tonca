@@ -1,0 +1,10 @@
+.indicator-progress {
+  display: none;
+}
+[data-sd-indicator=on] > .indicator-progress {
+  display: inline-block;
+}
+
+[data-sd-indicator=on] > .indicator-label {
+  display: none;
+}

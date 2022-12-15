@@ -1,0 +1,45 @@
+.transform-90 {
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.kenburns {
+  -webkit-transition-property: opacity, -webkit-transform;
+  -webkit-transition-duration: 2s, 6s;
+  -moz-transition-property: opacity, -moz-transform;
+  -moz-transition-duration: 2s, 6s;
+  -ms-transition-property: opacity, -ms-transform;
+  -ms-transition-duration: 2s, 6s;
+  -o-transition-property: opacity, -o-transform;
+  -o-transition-duration: 2s, 6s;
+  transition-property: opacity, transform;
+  transition-duration: 2s, 6s;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+}
+.kenburns:hover {
+  -webkit-transition-property: opacity, -webkit-transform;
+  -webkit-transition-duration: 2s, 6s;
+  -moz-transition-property: opacity, -moz-transform;
+  -moz-transition-duration: 2s, 6s;
+  -ms-transition-property: opacity, -ms-transform;
+  -ms-transition-duration: 2s, 6s;
+  -o-transition-property: opacity, -o-transform;
+  -o-transition-duration: 2s, 6s;
+  transition-property: opacity, transform;
+  transition-duration: 2s, 6s;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}

@@ -1,0 +1,143 @@
+//
+// Form Control
+//
+
+
+// Form control
+.form-control {
+	box-shadow: none !important;
+
+	// Dropdown shown state
+	.dropdown.show > & {
+		color: $input-focus-color;
+		background-color: $input-focus-bg;
+  	    border-color: $input-focus-border-color;
+	}
+
+	// Readonly state
+	&[readonly] {
+		background-color: $input-readonly-bg;
+	}
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover, 
+	&:-webkit-autofill:focus, 
+	&:-webkit-autofill:active  {
+		transition: background-color 5000s ease-in-out 0s;
+	}
+
+	// Solid style
+	&.form-control-solid {
+		background-color: $input-solid-bg;
+		border-color: $input-solid-bg;
+		@include placeholder($input-solid-placeholder-color);
+		color: $input-solid-color;
+		transition: $transition-input;
+
+		.dropdown.show > &,
+		&:active,
+		&.active,
+		&:focus,
+		&.focus {
+			background-color: $input-solid-bg-focus;
+			border-color: $input-solid-bg-focus;
+			color: $input-solid-color;
+			transition: $transition-input;
+		}
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover, 
+		&:-webkit-autofill:focus, 
+		&:-webkit-autofill:active  {
+			-webkit-box-shadow: 0 0 0 30px $input-solid-bg inset !important;
+			-webkit-text-fill-color: $input-solid-color !important;
+		}
+
+		&:-webkit-autofill {
+			-webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+			-webkit-animation-name: autofill-solid;
+			-webkit-animation-fill-mode: both;
+		}
+	}
+
+	&.form-control-solid-primary {
+		background-color: lighten($primary, 5%);
+		border-color: lighten($primary, 5%);
+		@include placeholder(lighten($dark, 5%));
+		color: $dark;
+		transition: $transition-input;
+
+		.dropdown.show>&,
+		&:active,
+		&.active,
+		&:focus,
+		&.focus {
+			background-color: lighten($primary, 3%);
+			border-color: lighten($primary, 3%);
+			color: $dark;
+			transition: $transition-input;
+		}
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover, 
+		&:-webkit-autofill:focus, 
+		&:-webkit-autofill:active  {
+			-webkit-box-shadow: 0 0 0 30px lighten($primary, 5%) inset !important;
+			-webkit-text-fill-color: $dark !important;
+		}
+
+		&:-webkit-autofill {
+			-webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+			-webkit-animation-name: autofill-solid-primary;
+			-webkit-animation-fill-mode: both;
+		}
+	}
+
+	// White style
+	&.form-control-white {
+		background-color: $body-bg;
+		border-color: $body-bg;
+
+		.dropdown.show > &,
+		&:active,
+		&.active,
+		&:focus,
+		&.focus {
+			background-color: $body-bg;
+			border-color: $body-bg;
+		}
+	}
+
+	// Flush
+	&.form-control-flush {
+		@include input-reset();
+	}
+}
+
+// Placeholder colors
+.placeholder-gray-500 {
+	@include placeholder($gray-500);
+}
+
+.placeholder-white {
+	@include placeholder($white);
+}
+
+// Textarea reset resize
+.resize-none {
+	resize: none;
+}
+
+@-webkit-keyframes autofill-solid {
+	0%,100% {
+		color: $input-solid-color;
+		background: transparent;
+	}
+}
+
+@-webkit-keyframes autofill-solid-primary {
+	0%,100% {
+		color: $dark;
+		background: transparent;
+	}
+}

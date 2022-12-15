@@ -1,0 +1,95 @@
+//
+// Aside extended
+//
+
+// General mode(all devices)
+.aside.aside-extended {
+	display: flex;
+	box-shadow: get($aside-config, general, box-shadow);
+	background-color: get($aside-config, general, bg-color);
+
+	// Aside primary panel
+	.aside-primary {
+		width: get($aside-config, extended, primary-width, desktop);
+		flex-shrink: 0;
+
+		// Aside secondary panel disabled mode
+		.aside-secondary-enabled & {
+			border-right: 1px solid $border-color;
+		}
+	}
+
+	// Aside secondary panel
+	.aside-secondary {
+		overflow: hidden;
+
+		// Workspace
+		.aside-workspace {
+			width: get($aside-config, extended, width) - get($aside-config, extended, primary-width, desktop);
+			flex-shrink: 0;
+		}
+	}
+}
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+	.aside.aside-extended {
+		transition: width get($aside-config, general, transition-speed) ease;
+
+		// Fixed aside mode
+		.aside-fixed & {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			z-index: get($aside-config, general, z-index);
+		}
+
+		// Static aside mode
+		.aside-static & {
+			position: relative;
+			z-index: 1;
+		}
+
+		// Aside secondary enabled
+		.aside-secondary-enabled & {
+			width: get($aside-config, extended, width);
+		}
+
+		// Aside secondary disabled
+		.aside-secondary-disabled & {
+			width: get($aside-config, extended, primary-width, desktop);
+
+			.aside-primary {
+				border-right: 0;
+			}
+		}
+
+		// Minimized aside mode
+		[data-pdms-aside-minimize="on"] & {
+			width: get($aside-config, extended, primary-width, desktop);
+			transition: width get($aside-config, general, transition-speed) ease;
+		}
+	}
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	.aside.aside-extended {
+		display: none;
+
+		// Aside primary
+		.aside-primary {
+			width: get($aside-config, extended, primary-width, tablet-and-mobile);
+		}
+
+		// Aside secondary
+		.aside-secondary {
+			// Workspace
+			.aside-workspace {
+				width: 100%;
+				flex-shrink: 1;
+			}
+		}
+	}
+}

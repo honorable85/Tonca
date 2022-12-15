@@ -1,0 +1,83 @@
+//
+// Stepper Pills Dark Skin
+//
+
+$stepper-bg-color: if(isDarkMode(), $gray-100, $dark);
+
+// Base
+.stepper-pills.stepper-dark {
+    .stepper-nav {
+        .stepper-item {            
+            padding-bottom: 2.75rem;
+
+            .stepper-label {
+                .stepper-title {
+                    color: $white;  
+                    font-size: 1.5rem;     
+                    font-weight: 500;                
+                }
+
+                .stepper-desc {
+                    color: $gray-600; 
+                    font-size: 1rem;   
+                    font-weight: 500;                     
+                }
+            }
+
+            .stepper-icon {                     
+                background-color: $stepper-bg-color;
+                border: 1px dashed $gray-700; 
+                
+                .stepper-number {                         
+                    color: $white !important;               
+                }
+            }
+
+            .stepper-line {                     
+               border-left-color: $gray-700; 
+            }
+
+            // Current
+            &.current {
+                .stepper-icon {
+                    background-color: $primary;
+                    border: 1px dashed $primary; 
+                }
+
+                .stepper-label {
+                    .stepper-title {
+                        color:$white;
+                    }
+
+                    .stepper-desc {
+                        color: $gray-600;
+                    }
+                }
+            }
+            
+            // Completed
+            &.current:last-child,
+            &.completed {
+                .stepper-icon {
+                    transition: $transition-link;
+                    background-color: $stepper-bg-color !important; 
+                    border: 1px dashed $gray-700 !important;   
+                    
+                    .stepper-check {
+                        font-size: 1.3rem;                             
+                    }
+                }
+
+                .stepper-label {
+                    .stepper-title {
+                        color: $gray-600;
+                    }
+
+                    .stepper-desc {
+                        color: $gray-700;
+                    }
+                }
+            }
+        }
+    }
+}

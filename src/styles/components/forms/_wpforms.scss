@@ -1,0 +1,42 @@
+// 
+// WPForms
+// 
+
+.seba-contact-form {
+    margin-bottom: 0 !important;
+}
+
+.wpforms-field-container {
+    padding: 0 !important;
+    padding-bottom: 1rem !important;
+
+    input[class^="wpforms-field"], select[class^="wpforms-field"], .choices__inner {
+        border-radius: 6px !important;
+        padding: 0.75rem 1rem !important;
+
+        &::placeholder {
+            color: $gray-400 !important;
+        }
+    }
+}
+
+.wpforms-submit-container {
+    padding: 0 !important;
+    padding-right: 1rem !important;
+    text-align: right !important;
+
+    .wpforms-submit {
+        background-color: $primary !important;
+        border-radius: 6px !important;
+        color: $white !important;
+    }
+}
+
+.wpforms-field-label {
+    font-size: 1rem !important;
+    color: $gray-700;
+}
+
+div.wpforms-container .wpforms-form .choices[data-type*="select-one"]:after{
+
+}

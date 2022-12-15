@@ -1,0 +1,39 @@
+/* CSS Document */
+
+.wrp { box-shadow: 0px 2px 2px 0px rgba(0,0,0,.4); height: auto; overflow: auto; }
+header { width: 100%; height: 240px; background: transparent url(../img/hd.jpg) no-repeat 0px 0px; position: relative; }
+header > table { width: 100%; height: 100%; }
+header form { width: 50%; height: auto; }
+header form > button { position: absolute; right: 10px; top: 8px;  background: #FFF url(../img/len.png) no-repeat 0px 0px; display: inline-block; width: 32px; height: 32px; border: none; outline: none; cursor: pointer; }
+header input { width: 100%; padding: 1.2em; border: #000 solid 1px; border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; }
+header input:hover, header input:focus { box-shadow: inset 1px 1px 5px 1px rgba(0, 0, 0, 0.1); }
+h2 { font-family: 'montserratbold'; font-size: 20px; }
+section { width: 100%; background-color: #FFF; padding: 1% 4%; box-sizing: border-box; height: auto; overflow: auto; }
+#recent_reports { height: auto; overflow: auto; }
+.report { position: relative; background-color: rgba(0,0,0,.16); border-radius: 8px; padding: 1%; box-sizing: border-box; cursor: pointer; }
+.report:nth-child(5n+5) { margin-right: 0px; }
+.report > i { position: absolute; right: 0px; top: 0px; font-size: 32px; color: #2ea02e; }
+.report img { width: 100%; height: 100%; transition: all .2s eas-in-out; }
+.report img:hover { transform: scale(1.01); }
+.slide-nav { position: absolute; width: 48px; height: 48px; top: 76px; z-index: 10; box-shadow: 0px 0px 1px 2px rgba(0,0,0,.2); border-radius: 100%; cursor: pointer; transition: all .2s ease-in-out; }
+.slide-nav:hover { transform: scale(1.06); }
+.slide-nav.left-arrow { left: 1px; background: transparent url(../img/nav-arrow.png) no-repeat 0px 0px; }
+.slide-nav.right-arrow { right: 48px; background: transparent url(../img/nav-arrow.png) no-repeat -49px 0px; }
+header > ul { position: absolute; top: 22px; right: 10px; }
+header > ul > li > a { text-decoration: none; display: inline-block; width: 24px; height: 24px; background:  rgba(0,0,0,.8) url(../img/menu.png) no-repeat 0px 0px; }
+header > ul > li > ul { display: none; position: absolute; top: 16px; right: 0px; background-color: #FFF; border: rgba(0,0,0,.12) solid 1xp; border-radius: 2px; box-shadow: 0px 1px 1px 2px rgba(0,0,0,.4); }
+header > ul > li > ul.foldout { display: block; }
+header > ul > li > ul > li { padding: .6em 1em; border-bottom: rgba(0,0,0,.12) solid 1px; white-space: nowrap; }
+header > ul > li > ul > li:hover { background-color: rgba(0,0,0,.1); }
+header > ul > li > ul > li:last-child { border-bottom: none; }
+header > ul > li > ul > li > a { color: #000; text-decoration: none!important; }
+#complete { width: 100%; height: auto; overflow: auto; position: relative; }
+.result-box { clear: both; overflow: auto; height: auto; width: 100%; border-bottom: rgba(0,0,0,.12) solid 1px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-sizing: border-box; }
+.result-box > div.photo-holder { width: 92px; height: 92px; float: left; }
+.result-box > div.photo-holder > img { width: 100%; height: 100%; border-radius: 100%; }
+.result-box > div.meta { margin-left: 100px; }
+.result-box > div { border: none!important; }
+.result-box > div.meta > span { font-size: 16px; color: #2C3E50; }
+.owl-nav {
+    visibility: hidden !important;
+}

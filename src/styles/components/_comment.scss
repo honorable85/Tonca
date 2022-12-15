@@ -1,0 +1,78 @@
+// 
+// Comments
+// 
+
+%comment-input-style {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 2px !important;
+    outline: none !important;
+    color: $dark;
+}
+
+%dark-comment-input-style {
+    color: $white !important;
+    border: $white solid 1px !important;
+}
+
+#comments {
+    margin-top: 0 !important;
+    
+    * {
+        color: $gray-600 !important;
+    }
+
+    .ql-container,
+    .ql-toolbar,
+    .wpdiscuz-sort-buttons {
+        background-color: transparent !important;
+    }
+
+    a {
+        color: #2C8CFD !important;
+        
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    .wc_comment {
+        border: none !important;
+    }
+
+    *::placeholder {
+        color: $gray-600 !important;
+    }
+
+    .wpd-prim-button {
+        background-color: $primary !important;
+        color: $light !important;
+
+        &:hover {
+            background-color: $dark !important;
+            color: $white !important;
+        }
+    }
+
+    & select,
+    & input:not([type="submit"]),
+    & .email {
+        @extend %comment-input-style;
+    }
+}
+
+[data-theme="dark"] {
+    #comments {
+        color: $white !important;
+
+        & select,
+        & input:not([type="submit"]),
+        & .email {
+            @extend %dark-comment-input-style;
+        }
+        
+        [class^=fa] {
+            color: $white !important;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+//
+// Main
+//
+
+// Body
+body {
+	background-color: $page-bg;
+}
+
+// Desktop Mode
+@include media-breakpoint-up(lg) {
+	// Containers
+	.container,
+	.container-xxl,
+	.container-fluid {
+		padding: 0 get($content-spacing, desktop);
+	}
+
+	// Wrapper
+	.wrapper {
+		padding-right: get($page-spacing, desktop);
+		transition: padding-left get($aside-config, general, transition-speed) ease,  margin-right get($aside-config, general, transition-speed) ease;
+
+		// Aside default enabled and aside fixed modes
+		.aside-default-enabled.aside-fixed & {
+			transition: padding-left get($aside-config, general, transition-speed) ease;
+			padding-left: get($aside-config, default, width);
+		}
+
+		// Aside default enabled, aside fixed and aside minimize modes
+		.aside-default-enabled.aside-fixed[data-pdms-aside-minimize="on"] & {
+			transition: padding-left get($aside-config, general, transition-speed) ease;
+			padding-left: get($aside-config, default, minimized-width);
+		}
+
+		// Aside extended enabled, aside secondary enabled & aside fixed modes
+		.aside-extended-enabled.aside-secondary-enabled.aside-fixed & {
+			transition: padding-left get($aside-config, general, transition-speed) ease;
+			padding-left: get($aside-config, extended, width);
+		}
+
+		// Aside extended enabled, aside secondary enabled, aside fixed modes and aside minimize modes
+		.aside-extended-enabled.aside-secondary-enabled.aside-fixed[data-pdms-aside-minimize="on"] & {
+			transition: padding-left get($aside-config, general, transition-speed) ease;
+			padding-left: get($aside-config, extended, primary-width, desktop) + get($page-spacing, desktop);
+		}
+
+		// Aside extended enabled, aside secondary disabled & aside fixed modes
+		.aside-extended-enabled.aside-secondary-disabled.aside-fixed & {
+			transition: padding-left get($aside-config, general, transition-speed) ease;
+			padding-left: get($aside-config, extended, primary-width, desktop);
+			padding-right: get($page-spacing, desktop-aside-secondary-disabled);
+		}
+
+		// Fixed header mode
+		.header-fixed[data-pdms-sticky-header="on"] & {
+			padding-top: get($header-config, desktop, default, height);
+		}
+	}
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	// Containers
+	.container,
+	.container-xxl,
+	.container-fluid {
+		max-width: none;
+		padding: 0 get($content-spacing, tablet-and-mobile);
+	}
+
+	// Wrapper
+	.wrapper {
+		// Fixed header mode
+		.header-tablet-and-mobile-fixed[data-pdms-sticky-header="on"] & {
+			padding-top: get($header-config, tablet-and-mobile, fixed, height);
+		}
+	}
+}

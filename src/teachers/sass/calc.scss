@@ -1,0 +1,53 @@
+/* CSS Document */
+.wrp {
+    > h1 { 
+        color: #000; 
+        font-family: 'montserratblack'; 
+        font-size: 20px; 
+        padding-left: 28px; 
+    }
+
+    > h2 { 
+        margin-left: 5%; 
+        font-style: oblique; 
+        font-size: 16px; 
+    }
+
+    > table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        border: rgba(0,0,0,.12) solid 1px; 
+        border-left: none; 
+        border-top: none; 
+        box-sizing: border-box; 
+
+        td, th { 
+            border: rgba(0,0,0,.12) solid 1px; 
+            border-right: none; 
+            border-top: none; 
+            padding: .8em; text-align: center; 
+        }
+
+        > thead {
+            th { 
+                border-top: rgba(0,0,0,.12) solid 1px; 
+            }
+        }
+
+        & + p { 
+            text-align: right; width: 100%; 
+        }
+    }
+}
+
+@media print {
+	body { 
+        print-color-adjust: exact; 
+        -webkit-print-color-adjust: exact; 
+    }
+	@page { size: 8.27in 11.69in; margin: 0.1in; }
+	tr { page-break-inside: avoid; }
+	.tab, .hpr, .phide { display: none !important; }
+	.tab + div { border: none; padding: 0px; margin: 0px; }
+	#runhead, #prthd, #prthdt { display: block; }
+}

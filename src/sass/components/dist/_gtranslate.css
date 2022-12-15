@@ -1,0 +1,10 @@
+.ajmf-gtranlate-wrapper .switcher .option {
+  position: absolute !important;
+}
+
+#ajmf_hd_home .ajmf-gtranlate-wrapper .selected {
+  background: none !important;
+}
+#ajmf_hd_home .ajmf-gtranlate-wrapper .selected > a {
+  border: none !important;
+}

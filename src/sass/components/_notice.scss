@@ -1,0 +1,14 @@
+//
+// Notice
+//
+
+@if (isDarkMode() == false) {
+    .notice.bg-light-warning {
+        background-color: #FFF9F4 !important;
+        border-color: #F89C47 !important;
+
+        .svg-icon.svg-icon-warning {
+            @include svg-icon-color(#F89C47, true);
+        }
+    }
+}

@@ -1,0 +1,308 @@
+//
+// Text
+//
+
+// Text colors
+@each $name, $color in $theme-text-colors { 
+    // Base color
+    .text-#{$name} {
+        color: $color !important;
+    }
+
+    // Inverse color
+    @if (theme-inverse-color($name)) {
+        .text-inverse-#{$name} {
+            color: theme-inverse-color($name) !important;
+        }
+    }
+
+    @if (theme-light-color($name)) {
+        // Light colors
+        .text-light-#{$name} {
+            color: theme-light-color($name) !important;
+        }
+    }
+
+    // Hover
+    .text-hover-#{$name} {
+        transition: $transition-link;
+
+        i {
+            transition: $transition-link;
+        }
+
+        &:hover {
+            transition: $transition-link;
+            color: $color !important;
+
+            i {
+                transition: $transition-link;
+				color: $color !important;
+			}
+
+			.svg-icon {
+				@include svg-icon-color($color);
+			}
+        }
+    }
+
+    // Hover inverse
+    @if (theme-inverse-color($name)) {
+        .text-hover-inverse-#{$name} {
+            transition: $transition-link;
+
+            i {
+                transition: $transition-link;
+            }
+
+            &:hover {
+                transition: $transition-link;
+                color: theme-inverse-color($name) !important;
+
+                i {
+                    transition: $transition-link;
+                    color: theme-inverse-color($name) !important;
+                }
+
+                .svg-icon {
+                    @include svg-icon-color(theme-inverse-color($name));
+                }
+            }
+        }
+    }
+
+    // Active
+    .text-active-#{$name} {
+        transition: $transition-link;        
+
+        i {
+            transition: $transition-link;
+        }
+
+        &.active {
+            transition: $transition-link;
+            color: $color !important;
+            
+            i {
+                transition: $transition-link;
+                color: $color !important;
+            }
+    
+            .svg-icon {
+                @include svg-icon-color($color);
+            }
+        }
+    }
+
+    // Active inverse
+    @if (theme-inverse-color($name)) {
+        .text-active-inverse-#{$name} {
+            transition: $transition-link;        
+
+            i {
+                transition: $transition-link;
+            }
+
+            &.active {
+                transition: $transition-link;
+                color: theme-inverse-color($name) !important;
+
+                i {
+                    transition: $transition-link;
+                    color: theme-inverse-color($name) !important;
+                }
+
+                .svg-icon {
+                    @include svg-icon-color(theme-inverse-color($name));
+                }
+            }
+        }
+    }
+
+    // Opacity
+    @each $oname, $ovalue in $opacity-values {
+        .text-opacity-#{$name}-#{$oname} {
+            color: rgba($color, $ovalue) !important;
+        }
+
+        .text-hover-opacity-#{$name}-#{$oname}:hover {
+            color: rgba($color, $ovalue) !important;
+        }
+
+        .text-active-opacity-#{$name}-#{$oname}.active {
+            color: rgba($color, $ovalue) !important;
+        }
+
+        .text-state-opacity-#{$name}-#{$oname} {
+            .active,
+            &:hover {
+                color: rgba($color, $ovalue) !important;
+            }		
+        }
+    }
+}
+
+// Text transparent
+.fw-boldest {
+    font-weight: $font-weight-boldest !important;
+}
+
+// Text transparent
+.text-transparent {
+    color: transparent;
+}
+
+// Cursor pointer
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Cursor default
+.cursor-default {
+    cursor: default;
+}
+// Cursor move
+.cursor-move {
+    cursor: move;
+}
+
+// Icons
+i {
+    line-height: 1;
+    font-size: 1rem;
+    color: $text-muted;
+}
+
+// Link transition
+a {
+    transition: $transition-link;
+
+    &:hover {
+        transition:$transition-link;
+    }
+}
+
+// Text dark theme colors
+// [data-theme="dark"] {
+//     @each $name, $color in $dark-theme-text-colors {
+//         // Base color
+//         .text-#{$name} {
+//             color: $color !important;
+//         }
+    
+//         // Inverse color
+//         @if (dark-theme-inverse-color($name)) {
+//             .text-inverse-#{$name} {
+//                 color: dark-theme-inverse-color($name) !important;
+//             }
+//         }
+    
+//         @if (dark-theme-light-color($name)) {
+//             // Light colors
+//             .text-light-#{$name} {
+//                 color: dark-theme-light-color($name) !important;
+//             }
+//         }
+    
+//         // Hover
+//         .text-hover-#{$name} {
+//             transition: $transition-link;
+    
+//             i {
+//                 transition: $transition-link;
+//             }
+    
+//             &:hover {
+//                 transition: $transition-link;
+//                 color: $color !important;
+    
+//                 i {
+//                     transition: $transition-link;
+//                     color: $color !important;
+//                 }
+    
+//                 .svg-icon {
+//                     @include svg-icon-color($color);
+//                 }
+//             }
+//         }
+    
+//         // Hover inverse
+//         @if (dark-theme-inverse-color($name)) {
+//             .text-hover-inverse-#{$name} {
+//                 transition: $transition-link;
+    
+//                 i {
+//                     transition: $transition-link;
+//                 }
+    
+//                 &:hover {
+//                     transition: $transition-link;
+//                     color: dark-theme-inverse-color($name) !important;
+    
+//                     i {
+//                         transition: $transition-link;
+//                         color: dark-theme-inverse-color($name) !important;
+//                     }
+    
+//                     .svg-icon {
+//                         @include svg-icon-color(dark-theme-inverse-color($name));
+//                     }
+//                 }
+//             }
+//         }
+    
+//         // Active
+//         .text-active-#{$name} {
+//             transition: $transition-link;        
+    
+//             i {
+//                 transition: $transition-link;
+//             }
+    
+//             &.active {
+//                 transition: $transition-link;
+//                 color: $color !important;
+                
+//                 i {
+//                     transition: $transition-link;
+//                     color: $color !important;
+//                 }
+        
+//                 .svg-icon {
+//                     @include svg-icon-color($color);
+//                 }
+//             }
+//         }
+    
+//         // Active inverse
+//         @if (dark-theme-inverse-color($name)) {
+//             .text-active-inverse-#{$name} {
+//                 transition: $transition-link;        
+    
+//                 i {
+//                     transition: $transition-link;
+//                 }
+    
+//                 &.active {
+//                     transition: $transition-link;
+//                     color: dark-theme-inverse-color($name) !important;
+    
+//                     i {
+//                         transition: $transition-link;
+//                         color: dark-theme-inverse-color($name) !important;
+//                     }
+    
+//                     .svg-icon {
+//                         @include svg-icon-color(dark-theme-inverse-color($name));
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     // Icons
+//     i {
+//         color: $gray-200;
+//     }
+// }

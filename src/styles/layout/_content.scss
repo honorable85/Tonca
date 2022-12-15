@@ -1,0 +1,34 @@
+//
+// Content
+//
+
+// General mode
+.content {
+	background-color: $content-bg-color;
+}
+
+.auth-bg {
+	background-color: if(isDarkMode(), $content-bg-color, $body-bg);
+}
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+	.content {
+		padding: get($content-spacing, desktop) 0;
+		@include border-radius($content-border-radius);
+
+		// Sidebar enabled mode
+		.toolbar-enabled & {
+			.toolbar {
+				padding-bottom: get($content-spacing, desktop);
+			}
+		}
+	}
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	.content {
+		padding: get($content-spacing, tablet-and-mobile) 0;
+	}
+}

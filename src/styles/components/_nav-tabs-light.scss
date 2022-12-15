@@ -1,0 +1,25 @@
+//
+// Nav tabs light
+// 
+
+.nav-tabs-light {
+    border-bottom: 2px solidrgba($gray-200, 0.5);
+    margin-bottom: -2px;
+
+    .nav-item .nav-link.active,
+  	.nav-item.show .nav-link,
+	.nav-item .nav-link:hover:not(.disabled) {	 
+		border-bottom: 2px solid $success;		 
+  	}
+
+	.nav-item {		 
+		.nav-link {
+			color: rgba($white, 0.8);
+            
+            &:hover,
+			&.active {
+				color: $white;
+			}	
+		}
+	}  
+}

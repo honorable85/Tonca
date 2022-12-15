@@ -1,0 +1,50 @@
+.stepper [data-sd-stepper-element=info],
+.stepper [data-sd-stepper-element=content] {
+  display: none;
+}
+.stepper [data-sd-stepper-element=info].current,
+.stepper [data-sd-stepper-element=content].current {
+  display: flex;
+}
+.stepper .stepper-item[data-sd-stepper-action=step] {
+  cursor: pointer;
+}
+.stepper [data-sd-stepper-action=previous] {
+  display: none;
+}
+.stepper [data-sd-stepper-action=next] {
+  display: inline-block;
+}
+.stepper [data-sd-stepper-action=submit] {
+  display: none;
+}
+.stepper.first [data-sd-stepper-action=previous] {
+  display: none;
+}
+.stepper.first [data-sd-stepper-action=next] {
+  display: inline-block;
+}
+.stepper.first [data-sd-stepper-action=submit] {
+  display: none;
+}
+.stepper.between [data-sd-stepper-action=previous] {
+  display: inline-block;
+}
+.stepper.between [data-sd-stepper-action=next] {
+  display: inline-block;
+}
+.stepper.between [data-sd-stepper-action=submit] {
+  display: none;
+}
+.stepper.last [data-sd-stepper-action=previous] {
+  display: inline-block;
+}
+.stepper.last [data-sd-stepper-action=next] {
+  display: none;
+}
+.stepper.last [data-sd-stepper-action=submit] {
+  display: inline-block;
+}
+.stepper.last [data-sd-stepper-action=submit].btn-flex {
+  display: flex;
+}

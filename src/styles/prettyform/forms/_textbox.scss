@@ -1,0 +1,70 @@
+.pf-textbox-wrp {
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 51%;
+        right: 51%;
+        bottom: 0px;
+        border-bottom: rgba(11,140,212,1) solid 2px;
+        transition: all .2s ease-in-out;
+    }
+
+    &.focus {
+        &::before {
+            left: 0px;
+	        right: 0px;
+        }
+
+        > span {
+            top: -1.2em;
+	        display: inline;
+        }
+    }
+
+    .pf-textbox { 
+        width: 100%; box-sizing: border-box; 
+
+        &.date {
+            padding-right: 20px;
+	        background-image: $pf-input-date-bg-image;
+        }
+    }
+
+    > span {
+        display: none; 
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        transition: all .2s ease-in-out;
+    }
+
+    > input, > select {
+        display: inline-block;
+        padding: 0.4em 0.8em;
+        padding-left: 0px;
+        font-size: 12.5px;
+        background: #FFF;
+        border: none;
+        border-bottom: rgba(0,0,0,.12) solid 1px;
+        border-radius: 2px;
+        font-family: sans-serif;
+        font-weight: normal;
+        color: rgba(0,0,0,.8);
+        outline: none;
+    }
+
+    > input:disabled, > select:disabled {
+        cursor: default;
+        box-shadow: none;
+        background: #F0F0F0;
+    }
+
+    > input:read-only, > select:read-only {
+        cursor: default;
+    }
+
+    > input:read-only:focus, > select:read-only:focus {
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,83 @@
+//
+// Transform
+//
+
+.transform-90 {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.btn-transform {
+    &:hover {
+        svg {
+            transform: translateX(5px);
+            transition: fill 0.3s ease;
+            stroke: $dark;
+        }
+    }
+}
+
+.kbs {
+    -webkit-transition-property: opacity, -webkit-transform;
+        -webkit-transition-duration: 1s, 3s;
+        -moz-transition-property: opacity, -moz-transform;
+        -moz-transition-duration: 1s, 3s;
+            -ms-transition-property: opacity, -ms-transform;
+            -ms-transition-duration: 1s, 3s;
+            -o-transition-property: opacity, -o-transform;
+            -o-transition-duration: 1s, 3s;
+                transition-property: opacity, transform;
+                transition-duration: 1s, 3s;
+                -webkit-transform-origin: center;
+                -moz-transform-origin: center;
+                    -ms-transform-origin: center;
+                    -o-transform-origin: center;
+                        transform-origin: center;
+    &:hover {
+        -webkit-transition-property: opacity, -webkit-transform;
+        -webkit-transition-duration: 1s, 3s;
+        -moz-transition-property: opacity, -moz-transform;
+        -moz-transition-duration: 1s, 3s;
+            -ms-transition-property: opacity, -ms-transform;
+            -ms-transition-duration: 1s, 3s;
+            -o-transition-property: opacity, -o-transform;
+            -o-transition-duration: 1s, 3s;
+                transition-property: opacity, transform;
+                transition-duration: 1s, 3s;
+                -webkit-transform-origin: center;
+                -moz-transform-origin: center;
+                    -ms-transform-origin: center;
+                    -o-transform-origin: center;
+                        transform-origin: center;
+        opacity:1;
+            -webkit-transform: scale(1.1);
+               -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                 -o-transform: scale(1.1);
+                    transform: scale(1.1);
+    }
+}
+
+.raise-n5 {
+    cursor: default;
+
+    &:hover {
+        transition: .3s ease;
+        -webkit-transition: .3s ease;
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 16px 4px rgb(0 0 0 / 20%);
+    }
+}
+
+.raise-n2 {
+    &:hover {
+        transition: .3s ease;
+        -webkit-transition: .3s ease;
+        transform: translateY(-5px);
+        box-shadow: 0px 9px 6px -9px rgb(0 0 0 / 41%);
+    }
+}
+
+.bend {
+    box-shadow: 0px -1px 41px 0px rgb(21 22 23 / 8%);
+}

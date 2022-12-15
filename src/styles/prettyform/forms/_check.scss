@@ -1,0 +1,16 @@
+.pf-checkbox-wrp, 
+.pf-radio-wrp {
+	label {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-image: $pf-check-off-bg-image;
+
+        &.check-on {
+            background-image: $pf-check-on-bg-image;
+        }
+    }
+}

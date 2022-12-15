@@ -1,0 +1,100 @@
+.pf-combobox-wrp {
+	ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        white-space: nowrap;
+    }
+
+    .pf-combobox-optionslist {
+        display: none;
+        position: absolute;
+        box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,.12);
+        background-color: #FFF;
+        width: 100%;
+        z-index: 1;
+        left: 0;
+
+        li {
+            &:hover {
+                background: #4AAAD6;
+	            color: #FFF!important;
+            }
+        }
+    }
+
+    .pf-combobox-option {
+        padding: .2em .4em;
+	    color: #000 !important;
+
+        &:hover, .pf-combobox-selected-option {
+            background: #4AAAD6;
+	        color: #FFF!important;
+        }
+    }
+
+    .pf-generic-combobox, 
+    .pf-combobox-selectedvalue,
+    .pf-combobox-selected {
+        padding: .2em .4em;
+        font-size: 12.5px;
+        background: #FFFFFF;
+    }
+
+    .pf-combobox-selected, .pf-combobox-selectedvalue {
+        padding: .4em .8em;
+        font-size: 12.5px;
+        background: #FFF;
+        border: none;
+        border-bottom: rgba(0,0,0,.12) solid 1px;
+        border-radius: 2px;
+        font-family: sans-serif;
+        font-weight: normal;
+        color: rgba(0,0,0,.8);
+        outline: none;
+
+        &::after {
+            content: " ";
+            z-index: 1;
+            position: absolute;
+            right: 5px;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            background-image: $pf-combo-bg-image;
+        }
+    }
+
+    .pf-combobox-prettycombo {
+        cursor: default;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 51%;
+            right: 51%;
+            bottom: 0px;
+            border-bottom: rgba(11,140,212,1) solid 2px;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    .pf-combobox-disabled {
+        border: 1px solid #999;
+        border-radius: 2px;
+        padding: 0px 0.2em;
+        position: relative;
+        box-sizing: border-box;
+        font-size: normal;
+        font-family: sans-serif;
+        font-weight: normal;
+        background: #EEE;
+        box-shadow: none;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}

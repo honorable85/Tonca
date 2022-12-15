@@ -1,0 +1,10 @@
+//
+// toolbar
+//
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+    .toolbar {
+        margin-bottom: get($content-spacing, tablet-and-mobile);
+    }
+}

@@ -1,0 +1,3 @@
+[data-theme=dark] .footer .posiion-absolute {
+  --bg-color: var(--bg-color);
+}
