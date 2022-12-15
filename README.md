@@ -18,6 +18,6 @@ op=>operation: Middleware 1
 cond=>condition: Autoriser Oui ou Non ?
 e=>end: Exécuter la route
 
-
+st->op->cond
 cond(yes)->e
-cond(no)->op
+```
