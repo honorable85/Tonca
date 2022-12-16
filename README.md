@@ -27,4 +27,4 @@ Donc si vous me lisez bien, mon objectif ultime est de corriger le tir. Faire de
 
 # Prérequis
 
-Une configuaration de base de [link](https://php.net "PHP")
+Une configuaration de base de [PHP](https://www.php.net/downloads.php) et de [Apache](https://httpd.apache.org/download.cgi). Vous aurez certainement besoin d'une base de données par la suite. Vous avez le choix entre tous les drivers supportés par PDO.
