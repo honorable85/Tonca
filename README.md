@@ -31,9 +31,9 @@ Une configuaration de base de [PHP](https://www.php.net/downloads.php) et de [Ap
 
 # Dépendances
 
-- [Flesco](https://packagist.org/packages/clicalmani/flesco)  
+- [Flesco](https://packagist.org/packages/clicalmani/flesco)   de **Abdoul-Madjid**
 - [dotenv](https://packagist.org/packages/vlucas/phpdotenv) de **Vans Lucas**
-- [XPower](https://packagist.org/packages/clicalmani/xpower)
+- [XPower](https://packagist.org/packages/clicalmani/xpower) de **Abdoul-Madjid**
 
 # Installation
 
