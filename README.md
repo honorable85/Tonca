@@ -38,3 +38,7 @@ Une configuaration de base de [PHP](https://www.php.net/downloads.php) et de [Ap
 # Installation
 
 `$ git clone https://github.com/honorable85/Toncat.git`
+
+# Documentation
+
+> En cours
