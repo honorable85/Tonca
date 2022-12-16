@@ -31,6 +31,10 @@ Une configuaration de base de [PHP](https://www.php.net/downloads.php) et de [Ap
 
 # Dépendances
 
-- [Flesco](https://packagist.org/packages/clicalmani/flesco) 
-- [dotenv](https://packagist.org/packages/vlucas/phpdotenv)
+- [Flesco](https://packagist.org/packages/clicalmani/flesco)  
+- [dotenv](https://packagist.org/packages/vlucas/phpdotenv) de **Vans Lucas**
 - [XPower](https://packagist.org/packages/clicalmani/xpower)
+
+# Installation
+
+`$ git clone https://github.com/honorable85/Toncat.git`
