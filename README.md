@@ -41,4 +41,4 @@ Une configuaration de base de [PHP](https://www.php.net/downloads.php) et de [Ap
 
 # Documentation
 
-> En cours
+> En cours ...
