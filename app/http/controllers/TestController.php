@@ -18,9 +18,12 @@ class TestController extends RequestController
 
     function hash($request)
     {
-        $xdt = new XDT;
-        $model = new TestModel;
-        echo '<pre>'; print_r($model->where('id_compte = 1')->get('privilege')); echo '</pre>';
-        echo 'Hash: ' . $request->verifyParameters(); 
+        $user = $request->user();
+        $user->can('edit:report');
+        echo '<pre>'; print_r($user); echo '</pre>';
+        // $xdt = new XDT;
+        // $model = new TestModel;
+        // echo '<pre>'; print_r($model->where('id_compte = 1')->get('privilege')); echo '</pre>';
+        // echo 'Hash: ' . $request->verifyParameters(); 
     }
 }
